@@ -132,7 +132,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               to="/fale-conosco"
               className={`${
                 isActive("/fale-conosco")
-                  ? "txt-[#8B0000]"
+                  ? "text-[#8B0000]"
                   : "text-gray-300 hover:text-white"
               } text-sm font-medium transition-colors`}
             >

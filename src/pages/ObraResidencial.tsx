@@ -1,21 +1,19 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
-import { Home, Heart, Shield, Palette, ArrowRight } from "lucide-react";
+import { Home, Heart, Shield, Palette, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function ObraResidencial() {
+const ResidentialProjects = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
-
+      <main>
       {/* Hero Section */}
       <section className="bg-black text-white py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/70"></div>
         <div className="container mx-auto px-8 relative">
           <div className="max-w-4xl">
             <h1 className="text-5xl font-bold mb-6">Obras Residenciais</h1>
-            <div className="w-20 h-1 bg-[#8B0000] mb-6"></div>
+            <div className="w-20 h-1 bg-primary mb-6"></div>
             <p className="text-gray-300 text-lg leading-7 max-w-2xl">
               Transformamos sonhos em lares, com projetos residenciais
               personalizados que combinam estética, conforto e funcionalidade.
@@ -39,11 +37,11 @@ export default function ObraResidencial() {
                   <br />
                   estilo de vida e necessidades de cada cliente.
                 </p>
-                <div className="w-20 h-1 bg-[#8B0000]"></div>
+                <div className="w-20 h-1 bg-primary"></div>
               </div>
 
               <p className="text-gray-600 text-sm leading-6 mb-6">
-                Na RMG Construtora, entendemos que uma casa é muito mais <br />
+                Na RGM Construtora, entendemos que uma casa é muito mais <br />
                 que uma estrutura física. É o espaço onde memórias são <br />
                 criadas, onde o conforto se encontra com a funcionalidade, e{" "}
                 <br />
@@ -60,32 +58,32 @@ export default function ObraResidencial() {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#8B0000]"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-gray-700 text-sm">
                     Casas de alto padrão
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#8B0000]"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-gray-700 text-sm">
                     Condomínios residenciais
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#8B0000]"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-gray-700 text-sm">
                     Reformas completas
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#8B0000]"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-gray-700 text-sm">
                     Projetos personalizados
                   </span>
                 </div>
               </div>
 
-              <Button className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
+              <Button className="bg-primary hover:bg-primary/90 text-white">
                 Agende uma consulta
               </Button>
             </div>
@@ -94,22 +92,22 @@ export default function ObraResidencial() {
             <div className="flex-1 relative">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/api/placeholder/300/200"
+                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Casa moderna"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
                 <img
-                  src="/api/placeholder/300/200"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Interior residencial"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
                 <img
-                  src="/api/placeholder/300/200"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Sala de estar"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
                 <img
-                  src="/api/placeholder/300/200"
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Área externa"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
@@ -129,14 +127,14 @@ export default function ObraResidencial() {
             <p className="text-gray-600 text-sm">
               Como trabalhamos para criar o lar dos seus sonhos
             </p>
-            <div className="w-20 h-1 bg-[#8B0000] mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Personalization */}
             <Card className="p-8 text-center shadow-md">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Home className="w-8 h-8 text-[#8B0000]" />
+                <Home className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">
                 Personalização
@@ -154,7 +152,7 @@ export default function ObraResidencial() {
             {/* Comfort */}
             <Card className="p-8 text-center shadow-md">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-[#8B0000]" />
+                <Heart className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">Conforto</h3>
               <p className="text-gray-600 text-sm text-center leading-6">
@@ -169,7 +167,7 @@ export default function ObraResidencial() {
             {/* Durability */}
             <Card className="p-8 text-center shadow-md">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-[#8B0000]" />
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">
                 Durabilidade
@@ -187,7 +185,7 @@ export default function ObraResidencial() {
             {/* Aesthetics */}
             <Card className="p-8 text-center shadow-md">
               <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Palette className="w-8 h-8 text-[#8B0000]" />
+                <Palette className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">Estética</h3>
               <p className="text-gray-600 text-sm text-center leading-6">
@@ -203,203 +201,310 @@ export default function ObraResidencial() {
         </div>
       </section>
 
-      {/* Residential Projects Section */}
+      {/* Process Section */}
       <section className="py-20">
-        <div className="container mx-auto px-8">
+        <div className="max-w-[1020px] mx-auto px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">
-              Projetos Residenciais
+              Terrenos e Construções
             </h2>
-            <p className="text-gray-600 text-sm">
-              Conheça alguns dos nossos principais projetos residenciais
+            <p className="text-gray-600 mb-6">
+              Processo completo do terreno à casa dos seus sonhos
             </p>
-            <div className="w-20 h-1 bg-[#8B0000] mt-6"></div>
+            <div className="w-20 h-1 bg-primary"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Project 1 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Residencial Villa Serena"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+          {/* Flowchart Container */}
+          <div className="relative">
+            {/* Desktop Flowchart */}
+            <div className="hidden lg:block">
+              {/* First Row */}
+              <div className="flex items-center justify-between mb-16">
+                {/* Step 1 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop"
+                          alt="Análise do terreno"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        1
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Análise do Terreno
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Estudo completo do terreno
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Residencial Villa Serena
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Condomínio residencial com 48 <br />
-                  unidades e completa infraestrutura de <br />
-                  lazer.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Card>
 
-            {/* Project 2 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Casa Moderna Jardins"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+                {/* Arrow 1 to 2 */}
+                <div className="flex items-center px-4">
+                  <ChevronRight className="w-6 h-6 text-primary" />
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Casa Moderna Jardins
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Residência contemporânea com 450m² <br />e integração total
-                  com a natureza.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Card>
 
-            {/* Project 3 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Edifício Horizonte"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+                {/* Step 2 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=250&fit=crop"
+                          alt="Fundação"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        2
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Fundação
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Preparação e construção da base
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Edifício Horizonte
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Prédio residencial com 15 andares, 2 <br />
-                  apartamentos por andar e vista <br />
-                  panorâmica.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Card>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project 4 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Casa de Praia Atlântica"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+                {/* Arrow 2 to 3 */}
+                <div className="flex items-center px-4">
+                  <ChevronRight className="w-6 h-6 text-primary" />
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Casa de Praia Atlântica
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Residência de veraneio com 5 suítes, <br />
-                  piscina e vista para o mar.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Card>
 
-            {/* Project 5 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Loft Urban Style"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+                {/* Step 3 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=250&fit=crop"
+                          alt="Estrutura"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        3
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Estrutura
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Pilares, vigas e lajes
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Loft Urban Style
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Apartamento tipo loft com pé direito <br />
-                  duplo e design industrial.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Card>
 
-            {/* Project 6 */}
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Condomínio Green Village"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="inline-block bg-[#8B0000] text-white text-xs px-3 py-1 rounded">
-                    Residencial
-                  </span>
+                {/* Arrow 3 to 4 */}
+                <div className="flex items-center px-4">
+                  <ChevronRight className="w-6 h-6 text-primary" />
+                </div>
+
+                {/* Step 4 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop"
+                          alt="Acabamento"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        4
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Acabamento
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Revestimentos e instalações
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-2">
-                  Condomínio Green Village
-                </h3>
-                <p className="text-gray-600 text-xs leading-5 mb-4">
-                  Condomínio horizontal com 22 casas e <br />
-                  conceito sustentável.
-                </p>
-                <div className="flex items-center text-[#1A365D] text-sm font-medium">
-                  <span>Ver projeto</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+
+              {/* Vertical Arrow Down */}
+              <div className="flex justify-center mb-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-0.5 h-8 bg-primary"></div>
+                  <div className="w-3 h-3 bg-primary transform rotate-45 border-r border-b border-primary"></div>
                 </div>
               </div>
-            </Card>
+
+              {/* Second Row */}
+              <div className="flex items-center justify-center space-x-16">
+                {/* Step 5 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=250&fit=crop"
+                          alt="Instalações"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        5
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Instalações
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Sistemas elétricos e hidráulicos
+                    </p>
+                  </div>
+                </div>
+
+                {/* Arrow 5 to 6 */}
+                <div className="flex items-center">
+                  <ChevronRight className="w-6 h-6 text-primary" />
+                </div>
+
+                {/* Step 6 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop"
+                          alt="Paisagismo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        6
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Paisagismo
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Jardins e ambientação externa
+                    </p>
+                  </div>
+                </div>
+
+                {/* Arrow 6 to 7 */}
+                <div className="flex items-center">
+                  <ChevronRight className="w-6 h-6 text-primary" />
+                </div>
+
+                {/* Step 7 */}
+                <div className="flex-1 max-w-xs">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 border-2 border-primary">
+                    <div className="relative mb-3">
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=250&fit=crop"
+                          alt="Casa Entregue"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                        7
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-sm mb-1">
+                      Entrega
+                    </h3>
+                    <p className="text-gray-600 text-xs">
+                      Casa pronta para morar
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Flowchart */}
+            <div className="lg:hidden space-y-6">
+              {[
+                {
+                  num: 1,
+                  title: "Análise do Terreno",
+                  desc: "Estudo completo do terreno",
+                  img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 2,
+                  title: "Fundação",
+                  desc: "Preparação e construção da base",
+                  img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 3,
+                  title: "Estrutura",
+                  desc: "Pilares, vigas e lajes",
+                  img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 4,
+                  title: "Acabamento",
+                  desc: "Revestimentos e instalações",
+                  img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 5,
+                  title: "Instalações",
+                  desc: "Sistemas elétricos e hidráulicos",
+                  img: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 6,
+                  title: "Paisagismo",
+                  desc: "Jardins e ambientação externa",
+                  img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop",
+                },
+                {
+                  num: 7,
+                  title: "Entrega",
+                  desc: "Casa pronta para morar",
+                  img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=250&fit=crop",
+                },
+              ].map((step, index) => (
+                <div key={step.num} className="relative">
+                  <div
+                    className={`bg-white rounded-lg shadow-sm p-4 ${
+                      step.num === 7 ? "border-2 border-primary" : ""
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="relative flex-shrink-0 w-20 h-16">
+                        <img
+                          src={step.img}
+                          alt={step.title}
+                          className="w-full h-full object-cover rounded"
+                        />
+                        <div className="absolute -top-1 -left-1 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+                          {step.num}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-black text-sm mb-1">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 text-xs">{step.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {index < 6 && (
+                    <div className="flex justify-center my-3">
+                      <div className="w-0.5 h-6 bg-primary"></div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -414,7 +519,7 @@ export default function ObraResidencial() {
             <p className="text-gray-600 text-sm">
               Como trabalhamos para transformar seu sonho em realidade
             </p>
-            <div className="w-20 h-1 bg-[#8B0000] mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -435,14 +540,14 @@ export default function ObraResidencial() {
                       orçamento para alinhar expectativas.
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-[#8B0000] border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8"></div>
                 </div>
 
                 {/* Step 2 */}
                 <div className="flex items-center">
                   <div className="flex-1 pr-8"></div>
-                  <div className="w-8 h-8 rounded-full bg-[#8B0000] border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8">
                     <h3 className="text-lg font-bold text-black mb-2">
                       Projeto Conceitual
@@ -466,14 +571,14 @@ export default function ObraResidencial() {
                       especificações técnicas.
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-[#8B0000] border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8"></div>
                 </div>
 
                 {/* Step 4 */}
                 <div className="flex items-center">
                   <div className="flex-1 pr-8"></div>
-                  <div className="w-8 h-8 rounded-full bg-[#8B0000] border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8">
                     <h3 className="text-lg font-bold text-black mb-2">
                       Construção
@@ -497,7 +602,7 @@ export default function ObraResidencial() {
                       para ser habitado.
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-[#8B0000] border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8"></div>
                 </div>
               </div>
@@ -507,7 +612,7 @@ export default function ObraResidencial() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#1A365D] text-white">
+      <section className="py-20 bg-secondary text-white">
         <div className="container mx-auto px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Pronto para construir ou reformar sua casa?
@@ -517,169 +622,14 @@ export default function ObraResidencial() {
             podemos <br />
             transformar sua visão em realidade.
           </p>
-          <Button className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
+          <Button className="bg-primary hover:bg-primary/90 text-white">
             Agende uma visita
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Company Info */}
-            <div>
-              <div className="flex items-center mb-4">
-                <span className="text-lg font-bold text-white">RMG</span>
-                <span className="text-lg font-bold text-[#8B0000] ml-1">
-                  CONSTRUTORA
-                </span>
-              </div>
-              <p className="text-gray-300 text-sm leading-5 mb-6">
-                Especializada em obras empresariais, corporativas <br />e
-                residenciais, além de serviços de terceirização.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-5 h-5 text-gray-400">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                </div>
-                <div className="w-5 h-5 text-gray-400">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
-                  </svg>
-                </div>
-                <div className="w-5 h-5 text-gray-400">
-                  <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Navegação</h3>
-              <div className="space-y-2">
-                <a
-                  href="/"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Home
-                </a>
-                <a
-                  href="/obra-empresarial"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Obra Empresarial
-                </a>
-                <a
-                  href="/obra-corporativa"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Obra Corporativa
-                </a>
-                <a
-                  href="/obra-residencial"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Obra Residencial
-                </a>
-                <a
-                  href="#"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Facilities
-                </a>
-                <a
-                  href="#"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Sobre Nós
-                </a>
-                <a
-                  href="#"
-                  className="block text-gray-300 text-sm hover:text-white transition-colors"
-                >
-                  Fale Conosco
-                </a>
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Contato</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#8B0000] mr-2 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <span className="text-gray-300 text-sm">
-                    Av. Paulista, 1000, São Paulo - SP
-                  </span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#8B0000] mr-2 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <span className="text-gray-300 text-sm">(11) 5555-5555</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#8B0000] mr-2 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <span className="text-gray-300 text-sm">
-                    contato@rmgconstrutora.com.br
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-            <p className="text-gray-400 text-xs">
-              © 2025 RMG Construtora. Todos os direitos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
+    </main>
     </div>
   );
-}
+};
+
+export default ResidentialProjects;

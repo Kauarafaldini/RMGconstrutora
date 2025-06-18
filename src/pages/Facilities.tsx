@@ -7,12 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
 import {
   Wrench,
   ClipboardList,
   Heart,
-  Shield,
   Settings,
   Users,
   CheckCircle,
@@ -22,13 +20,12 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Leaf,
 } from "lucide-react";
 
 const Facilities = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-black text-white relative">
@@ -100,7 +97,7 @@ const Facilities = () => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-red-900 rounded-full mr-3"></div>
                   <span className="text-gray-700 text-sm">
-                    Segurança patrimonial
+                    Jardinagem
                   </span>
                 </div>
               </div>
@@ -187,14 +184,13 @@ const Facilities = () => {
             <Card className="border-t-4 border-t-red-900">
               <CardHeader>
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-red-900" />
+                  <Leaf className="w-6 h-6 text-red-900" />
                 </div>
-                <CardTitle className="text-lg">Segurança Patrimonial</CardTitle>
+                <CardTitle className="text-lg">Jardinagem</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Proteção de ativos físicos com equipes treinadas e sistemas de
-                  segurança integrados.
+                  Manutenção e cuidado de áreas verdes, jardins e paisagismo corporativo.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -228,228 +224,6 @@ const Facilities = () => {
                 </CardDescription>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefícios dos Nossos Serviços */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">
-              Benefícios dos Nossos Serviços
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Por que terceirizar seus serviços de facilities com a RMG
-              Construtora
-            </p>
-            <div className="w-20 h-1 bg-red-900 mx-auto"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-t-4 border-t-red-900 p-8">
-              <CardHeader>
-                <CardTitle className="text-lg mb-4">
-                  Redução de Custos
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Economia com pessoal, encargos e benefícios
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Otimização de processos e recursos
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Ganho de escala em compras e contratos
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-t-4 border-t-blue-900 p-8">
-              <CardHeader>
-                <CardTitle className="text-lg mb-4">
-                  Foco no Core Business
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Direcionamento de recursos para atividades-fim
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Redução de complexidade administrativa
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Aumento da produtividade organizacional
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-t-4 border-t-blue-900 p-8">
-              <CardHeader>
-                <CardTitle className="text-lg mb-4">
-                  Expertise Especializada
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Acesso a profissionais qualificados e treinados
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Implementação de melhores práticas do mercado
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Conhecimento técnico especializado em cada área
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-t-4 border-t-red-900 p-8">
-              <CardHeader>
-                <CardTitle className="text-lg mb-4">Gestão Eficiente</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Indicadores de desempenho claros e mensuráveis
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Sistemas de gestão e controle avançados
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                      <div className="w-2 h-2 bg-red-900 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-600 text-sm">
-                      Processos padronizados e documentados
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Nosso Processo */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">
-              Nosso Processo
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Como implementamos e gerenciamos seus serviços de facilities
-            </p>
-            <div className="w-20 h-1 bg-red-900 mx-auto"></div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute top-6 left-0 w-full h-0.5 bg-gray-300"></div>
-            <div className="grid md:grid-cols-4 gap-8 relative">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 relative z-10">
-                  1
-                </div>
-                <h3 className="font-bold text-lg mb-2">Diagnóstico</h3>
-                <p className="text-gray-600 text-sm">
-                  Avaliação detalhada das instalações e necessidades
-                  específicas.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 relative z-10">
-                  2
-                </div>
-                <h3 className="font-bold text-lg mb-2">Planejamento</h3>
-                <p className="text-gray-600 text-sm">
-                  Desenvolvimento de estratégia personalizada e plano de
-                  implementação.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 relative z-10">
-                  3
-                </div>
-                <h3 className="font-bold text-lg mb-2">Implementação</h3>
-                <p className="text-gray-600 text-sm">
-                  Transição estruturada e treinamento das equipes dedicadas.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4 relative z-10">
-                  4
-                </div>
-                <h3 className="font-bold text-lg mb-2">Gestão Contínua</h3>
-                <p className="text-gray-600 text-sm">
-                  Monitoramento, relatórios e melhoria contínua dos serviços.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
