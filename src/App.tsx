@@ -15,27 +15,33 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/obra-empresarial" element={<ObraEmpresarial />} />
-          <Route path="/obra-corporativa" element={<ObraCorporativa />} />
-          <Route path="/obra-residencial" element={<ObraResidencial />} />
-          <Route path="/facilities" element={<Facilities />} />
-          <Route path="/sobre-nos" element={<SobreNos />} />
-          <Route path="/fale-conosco" element={<FaleConosco />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <BrowserRouter>
+          <div className="min-h-screen bg-white">
+            <Navigation />
+            <main>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/obra-empresarial" element={<ObraEmpresarial />} />
+                <Route path="/obra-corporativa" element={<ObraCorporativa />} />
+                <Route path="/obra-residencial" element={<ObraResidencial />} />
+                <Route path="/facilities" element={<Facilities />} />
+                <Route path="/sobre-nos" element={<SobreNos />} />
+                <Route path="/fale-conosco" element={<FaleConosco />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+          </div>
+          <Toaster />
+          <Sonner />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

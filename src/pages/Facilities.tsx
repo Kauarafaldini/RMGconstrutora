@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import {
   Wrench,
   ClipboardList,
@@ -22,8 +23,11 @@ import {
   Linkedin,
   Leaf,
 } from "lucide-react";
+import FacilitiesCarousel from "../components/FacilitiesCarousel";
+
 
 const Facilities = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
 
@@ -102,7 +106,7 @@ const Facilities = () => {
                 </div>
               </div>
 
-              <Button className="bg-red-900 hover:bg-red-800 text-white mt-8">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 hover:bg-red-800 text-white mt-8">
                 Solicite uma proposta
               </Button>
             </div>
@@ -228,6 +232,14 @@ const Facilities = () => {
         </div>
       </section>
 
+      {/* Carrossel de Fotos dos Facilities */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-center mb-8">Veja nossos serviços em ação</h3>
+          <FacilitiesCarousel />
+        </div>
+      </section>
+
       {/* Statistics Section */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-8">
@@ -263,7 +275,7 @@ const Facilities = () => {
             nossos serviços de facilities podem ajudar sua empresa a reduzir
             custos e aumentar a eficiência.
           </p>
-          <Button className="bg-red-900 hover:bg-red-800 text-white">
+          <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 hover:bg-red-800 text-white">
             Solicite uma proposta personalizada
           </Button>
         </div>

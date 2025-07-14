@@ -2,8 +2,10 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Home, Heart, Shield, Palette, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const ResidentialProjects = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
       <main>
@@ -83,33 +85,42 @@ const ResidentialProjects = () => {
                 </div>
               </div>
 
-              <Button className="bg-primary hover:bg-primary/90 text-white">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-primary hover:bg-primary/90 text-white">
                 Agende uma consulta
               </Button>
             </div>
 
             {/* Images */}
             <div className="flex-1 relative">
+              {/* Indicadores */}
+              <div className="absolute -top-8 left-0 flex gap-4 z-10">
+                <div className="bg-primary text-white rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
+                  <span>10 anos de experiência</span>
+                </div>
+                <div className="bg-primary text-white border border-primary rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
+                  <span>+50 contratos</span>
+                </div>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <img
                   src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Casa moderna"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Interior residencial"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Sala de estar"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
                   alt="Área externa"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
               </div>
             </div>
@@ -622,7 +633,7 @@ const ResidentialProjects = () => {
             podemos <br />
             transformar sua visão em realidade.
           </p>
-          <Button className="bg-primary hover:bg-primary/90 text-white">
+          <Button onClick={() => navigate("/fale-conosco")} className="bg-primary hover:bg-primary/90 text-white">
             Agende uma visita
           </Button>
         </div>

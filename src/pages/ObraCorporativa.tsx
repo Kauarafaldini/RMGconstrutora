@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Navigation from "@/components/Navigation";
 import { Building, Award, TrendingUp, Shield, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ObraCorporativa() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-black text-white py-32 relative">
@@ -76,7 +75,7 @@ export default function ObraCorporativa() {
                 inspiram colaboradores e otimizam operações.
               </p>
 
-              <Button className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
                 Agende uma visita
               </Button>
             </div>
@@ -326,7 +325,7 @@ export default function ObraCorporativa() {
             projeto corporativo e <br />
             descobrir como podemos ajudar.
           </p>
-          <Button className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
+          <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-[#8B0000]/90 text-white">
             Solicite uma proposta
           </Button>
         </div>

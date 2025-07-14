@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import {
   Check,
@@ -21,6 +22,7 @@ import {
 } from "lucide-react";
 
 const ObraEmpresarial = () => {
+  const navigate = useNavigate();
   const mosaicImages = [
     {
       src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
@@ -50,8 +52,6 @@ const ObraEmpresarial = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-black text-white py-16 lg:py-24">
@@ -148,7 +148,7 @@ const ObraEmpresarial = () => {
                 </div>
               </div>
 
-              <Button className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
                 Solicite um orçamento
               </Button>
             </div>
@@ -293,7 +293,7 @@ const ObraEmpresarial = () => {
               </p>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <Button className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
                 Agende uma consulta
               </Button>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -22,10 +23,9 @@ import {
 } from "lucide-react";
 
 const SobreNos = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-black text-white relative">
@@ -210,292 +210,6 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* Nossa Equipe */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">Nossa Equipe</h2>
-            <p className="text-gray-600 mb-6">
-              Conheça os profissionais por trás da RMG Construtora
-            </p>
-            <div className="w-20 h-1 bg-red-900 mx-auto"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
-              <div className="aspect-square">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Roberto Gomes Mendes"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">Roberto Gomes Mendes</CardTitle>
-                <CardDescription className="text-red-900 font-medium">
-                  Fundador e CEO
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Com mais de 30 anos de experiência no setor da construção
-                  civil, Roberto fundou a RMG com a visão de transformar o
-                  mercado.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <div className="aspect-square">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Ana Cristina Alves"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">Ana Cristina Alves</CardTitle>
-                <CardDescription className="text-red-900 font-medium">
-                  Diretora de Operações
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Engenheira civil com especialização em gestão de projetos, Ana
-                  lidera nossas operações com excelência há 15 anos.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <div className="aspect-square">
-                <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Carlos Eduardo Santos"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">Carlos Eduardo Santos</CardTitle>
-                <CardDescription className="text-red-900 font-medium">
-                  Diretor Técnico
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Arquiteto com mestrado em construções sustentáveis, Carlos é
-                  responsável pela inovação técnica em nossos projetos.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <div className="aspect-square">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Mariana Costa"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">Mariana Costa</CardTitle>
-                <CardDescription className="text-red-900 font-medium">
-                  Diretora Comercial
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Com vasta experiência em marketing e vendas, Mariana lidera
-                  nossa equipe comercial com foco em resultados e satisfação do
-                  cliente.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Nossa Trajetória */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">
-              Nossa Trajetória
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Os principais marcos na história da RMG Construtora
-            </p>
-            <div className="w-20 h-1 bg-red-900 mx-auto"></div>
-          </div>
-
-          <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-gray-300"></div>
-
-            <div className="space-y-16">
-              {/* 1998 */}
-              <div className="flex items-center">
-                <div className="flex-1 text-right pr-8">
-                  <h3 className="text-lg font-bold mb-2">1998</h3>
-                  <p className="text-gray-600 text-sm">
-                    Fundação da RMG Construtora com foco inicial em projetos
-                    residenciais de pequeno porte.
-                  </p>
-                </div>
-                <div className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg relative z-10">
-                  1
-                </div>
-                <div className="flex-1 pl-8"></div>
-              </div>
-
-              {/* 2005 */}
-              <div className="flex items-center">
-                <div className="flex-1 pr-8"></div>
-                <div className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg relative z-10">
-                  2
-                </div>
-                <div className="flex-1 text-left pl-8">
-                  <h3 className="text-lg font-bold mb-2">2005</h3>
-                  <p className="text-gray-600 text-sm">
-                    Expansão para o segmento empresarial com a construção do
-                    primeiro edifício comercial de grande porte.
-                  </p>
-                </div>
-              </div>
-
-              {/* 2010 */}
-              <div className="flex items-center">
-                <div className="flex-1 text-right pr-8">
-                  <h3 className="text-lg font-bold mb-2">2010</h3>
-                  <p className="text-gray-600 text-sm">
-                    Início das operações no segmento de facilities, oferecendo
-                    serviços completos de terceirização.
-                  </p>
-                </div>
-                <div className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg relative z-10">
-                  3
-                </div>
-                <div className="flex-1 pl-8"></div>
-              </div>
-
-              {/* 2015 */}
-              <div className="flex items-center">
-                <div className="flex-1 pr-8"></div>
-                <div className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg relative z-10">
-                  4
-                </div>
-                <div className="flex-1 text-left pl-8">
-                  <h3 className="text-lg font-bold mb-2">2015</h3>
-                  <p className="text-gray-600 text-sm">
-                    Conquista da certificação ISO 9001 e início da expansão para
-                    outros estados do Brasil.
-                  </p>
-                </div>
-              </div>
-
-              {/* 2023 */}
-              <div className="flex items-center">
-                <div className="flex-1 text-right pr-8">
-                  <h3 className="text-lg font-bold mb-2">2023</h3>
-                  <p className="text-gray-600 text-sm">
-                    Celebração de 25 anos de atuação com mais de 500 projetos
-                    concluídos e presença em 5 estados brasileiros.
-                  </p>
-                </div>
-                <div className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg relative z-10">
-                  5
-                </div>
-                <div className="flex-1 pl-8"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certificações e Reconhecimentos */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">
-              Certificações e Reconhecimentos
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Nossa excelência reconhecida pelo mercado
-            </p>
-            <div className="w-20 h-1 bg-red-900 mx-auto"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-12 h-12 bg-red-900 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">ISO</span>
-                  </div>
-                </div>
-                <CardTitle className="text-base">ISO 9001</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Certificação de Gestão da Qualidade, garantindo processos
-                  padronizados e eficientes.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">ISO</span>
-                  </div>
-                </div>
-                <CardTitle className="text-base">ISO 14001</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Certificação de Gestão Ambiental, demonstrando nosso
-                  compromisso com a sustentabilidade.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">LEED</span>
-                  </div>
-                </div>
-                <CardTitle className="text-base">LEED</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Certificação para construções sustentáveis, com diversos
-                  projetos certificados.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">OHSAS</span>
-                  </div>
-                </div>
-                <CardTitle className="text-base">OHSAS 18001</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-sm">
-                  Certificação de Segurança e Saúde Ocupacional, priorizando o
-                  bem-estar dos colaboradores.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-8 text-center">
@@ -507,14 +221,8 @@ const SobreNos = () => {
             a transformar seu projeto em realidade.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-900 hover:bg-red-800 text-white">
+            <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 hover:bg-red-800 text-white">
               Entre em contato
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-900"
-            >
-              Conheça nossos projetos
             </Button>
           </div>
         </div>

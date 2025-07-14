@@ -23,9 +23,11 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   const featuredProjects = [
     {
@@ -98,7 +100,7 @@ const Index = () => {
                 residencial e facilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+                <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
                   Solicite um orçamento
                 </Button>
                 <Button

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
@@ -13,9 +13,15 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
   });
   const location = useLocation();
 
+  // Fechar dropdowns quando a rota mudar
+  useEffect(() => {
+    setDropdowns({ home: false, obras: false });
+  }, [location.pathname]);
+
   const toggleDropdown = (dropdown: keyof typeof dropdowns) => {
     setDropdowns((prev) => ({
-      ...prev,
+      home: false,
+      obras: false,
       [dropdown]: !prev[dropdown],
     }));
   };
@@ -67,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                     onClick={closeDropdowns}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    sobre nós
+                    Sobre Nós
                   </Link>
                 </div>
               )}
