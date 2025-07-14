@@ -37,10 +37,39 @@ const FaleConosco = () => {
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [status, setStatus] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setStatus("enviando");
+
+    try {
+      const response = await fetch("https://localhost/send-form.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          ...formData,
+          privacyAccepted: formData.privacyAccepted ? "true" : "false",
+        }).toString(),
+      });
+
+      const text = await response.text();
+      if (text.includes("success")) {
+        setStatus("sucesso");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          privacyAccepted: false,
+        });
+      } else {
+        setStatus("erro");
+      }
+    } catch {
+      setStatus("erro");
+    }
   };
 
   const faqData = [
@@ -321,10 +350,17 @@ const FaleConosco = () => {
                     <Button
                       type="submit"
                       className="w-full bg-[#8B0000] hover:bg-[#660000] text-white py-3"
-                      disabled={!formData.privacyAccepted}
+                      disabled={!formData.privacyAccepted || status === "enviando"}
                     >
-                      Enviar mensagem
+                      {status === "enviando" ? "Enviando..." : "Enviar mensagem"}
                     </Button>
+
+                    {status === "sucesso" && (
+                      <p className="text-green-600 mt-2">Mensagem enviada com sucesso!</p>
+                    )}
+                    {status === "erro" && (
+                      <p className="text-red-600 mt-2">Erro ao enviar. Tente novamente mais tarde.</p>
+                    )}
                   </form>
                 </CardContent>
               </Card>
@@ -355,56 +391,69 @@ const FaleConosco = () => {
                 </div>
               </div>
 
-              {/* Navigation */}
-              <div>
-                <h3 className="text-white text-base font-semibold mb-4">
-                  Navegação
-                </h3>
-                <nav className="space-y-2">
-                  <Link
-                    to="/"
-                    className="block text-gray-300 text-sm hover:text-white"
+            {/* Navigation */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Navegação</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Home
-                  </Link>
-                  <Link
-                    to="/obra-empresarial"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/obra-empresarial"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Obra Empresarial
-                  </Link>
-                  <Link
-                    to="/obra-corporativa"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/obra-corporativa"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Obra Corporativa
-                  </Link>
-                  <Link
-                    to="/obra-residencial"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/obra-residencial"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Obra Residencial
-                  </Link>
-                  <Link
-                    to="/facilities"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/facilities"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Facilities
-                  </Link>
-                  <Link
-                    to="/sobre-nos"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/sobre-nos"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Sobre Nós
-                  </Link>
-                  <Link
-                    to="/fale-conosco"
-                    className="block text-gray-300 text-sm hover:text-white"
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/fale-conosco"
+                    className="text-gray-400 hover:text-white text-sm"
                   >
                     Fale Conosco
-                  </Link>
-                </nav>
-              </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
 
               {/* Contact */}
               <div>
