@@ -80,18 +80,12 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <section className="relative bg-black text-white py-20 lg:py-32">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-30"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/70"></div>
+          <div className="absolute inset-0 hero-background"></div>
+          <div className="absolute inset-0 hero-gradient"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Construindo o <span className="text-[#8B0000]">futuro</span>
+              <h1 className="hero-title font-bold leading-tight mb-6">
+                Construindo o <span className="text-primary-red">futuro</span>
                 <br />
                 com excelência
               </h1>
@@ -100,12 +94,13 @@ const Index = () => {
                 residencial e facilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={() => navigate("/fale-conosco")} className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+                <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
                   Solicite um orçamento
                 </Button>
                 <Button
+                  onClick={() => navigate("/sobre-nos")}
                   variant="outline"
-                  className="border-[#8B0000] text-[#8B0000] hover:bg-[#8B0000] hover:text-white px-6 py-3 text-sm font-medium"
+                  className="btn-outline-primary"
                 >
                   Conheça nossa história
                 </Button>
@@ -125,31 +120,31 @@ const Index = () => {
                 Compromisso com qualidade, inovação e sustentabilidade em cada
                 projeto.
               </p>
-              <div className="w-20 h-1 bg-[#8B0000] mx-auto"></div>
+              <div className="section-divider"></div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  icon: <CheckCircle className="w-8 h-8 text-[#8B0000]" />,
+                  icon: <CheckCircle className="w-8 h-8 text-primary-red" />,
                   title: "Qualidade",
                   description:
                     "Comprometimento com os mais altos padrões de qualidade em todos os projetos.",
                 },
                 {
-                  icon: <CheckCircle className="w-8 h-8 text-[#8B0000]" />,
+                  icon: <CheckCircle className="w-8 h-8 text-primary-red" />,
                   title: "Inovação",
                   description:
                     "Busca constante por soluções inovadoras e tecnologias avançadas.",
                 },
                 {
-                  icon: <CheckCircle className="w-8 h-8 text-[#8B0000]" />,
+                  icon: <CheckCircle className="w-8 h-8 text-primary-red" />,
                   title: "Sustentabilidade",
                   description:
                     "Compromisso com práticas sustentáveis e responsabilidade ambiental.",
                 },
                 {
-                  icon: <CheckCircle className="w-8 h-8 text-[#8B0000]" />,
+                  icon: <CheckCircle className="w-8 h-8 text-primary-red" />,
                   title: "Confiança",
                   description:
                     "Relacionamentos de longo prazo baseados em confiança e transparência.",
@@ -157,10 +152,10 @@ const Index = () => {
               ].map((value, index) => (
                 <Card
                   key={index}
-                  className="bg-white border-0 shadow-lg text-center p-6"
+                  className="card-value"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center">
+                    <div className="icon-container">
                       {value.icon}
                     </div>
                   </div>
@@ -186,31 +181,31 @@ const Index = () => {
               <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-6">
                 Oferecemos soluções completas para diversos segmentos
               </p>
-              <div className="w-20 h-1 bg-[#8B0000] mx-auto"></div>
+              <div className="section-divider"></div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  icon: <Building className="w-7 h-7 text-[#8B0000]" />,
+                  icon: <Building className="w-7 h-7 text-primary-red" />,
                   title: "Obra Empresarial",
                   description:
                     "Construções para empresas de todos os portes, com foco em funcionalidade e eficiência.",
                 },
                 {
-                  icon: <Users className="w-7 h-7 text-[#8B0000]" />,
+                  icon: <Users className="w-7 h-7 text-primary-red" />,
                   title: "Obra Corporativa",
                   description:
                     "Projetos sofisticados para grandes corporações, com acabamentos de alto padrão.",
                 },
                 {
-                  icon: <Home className="w-7 h-7 text-[#8B0000]" />,
+                  icon: <Home className="w-7 h-7 text-primary-red" />,
                   title: "Obra Residencial",
                   description:
                     "Casas e apartamentos com design personalizado, conforto e qualidade.",
                 },
                 {
-                  icon: <BarChart3 className="w-7 h-7 text-[#8B0000]" />,
+                  icon: <BarChart3 className="w-7 h-7 text-primary-red" />,
                   title: "Facilities",
                   description:
                     "Serviços de terceirização para gestão e manutenção de instalações.",
@@ -218,10 +213,10 @@ const Index = () => {
               ].map((service, index) => (
                 <Card
                   key={index}
-                  className="bg-white border-t-4 border-t-[#8B0000] shadow-lg"
+                  className="card-service"
                 >
                   <CardContent className="p-6">
-                    <div className="w-13 h-13 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <div className="icon-container-lg mb-4">
                       {service.icon}
                     </div>
                     <CardTitle className="text-lg font-bold text-black mb-3">
@@ -236,7 +231,7 @@ const Index = () => {
             </div>
 
             <div className="text-center mt-8">
-              <button className="text-[#8B0000] font-medium text-sm hover:text-red-700 transition-colors inline-flex items-center gap-2">
+              <button onClick={() => navigate("/facilities")} className="text-primary-red font-medium text-sm hover:text-red-700 transition-colors inline-flex items-center gap-2">
                 Ver todos os serviços
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -254,14 +249,14 @@ const Index = () => {
               <p className="text-gray-600 text-sm max-w-2xl mb-6">
                 Conheça algumas de nossas obras mais recentes
               </p>
-              <div className="w-20 h-1 bg-[#8B0000]"></div>
+              <div className="section-divider"></div>
             </div>
 
             {/* Carousel Container */}
             <div className="relative">
               <div className="overflow-hidden rounded-lg">
                 <div
-                  className="flex transition-transform duration-500 ease-in-out"
+                  className="flex carousel-slide"
                   style={{
                     transform: `translateX(-${currentSlide * 100}%)`,
                   }}
@@ -277,11 +272,11 @@ const Index = () => {
                               alt={project.title}
                               className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div className="absolute inset-0 project-image-gradient"></div>
                             <div className="absolute bottom-4 left-4">
-                              <span className="inline-block bg-[#8B0000] text-white text-sm font-medium px-4 py-2 rounded">
-                                {project.category}
-                              </span>
+                                                          <span className="inline-block bg-primary-red text-white text-sm font-medium px-4 py-2 rounded">
+                              {project.category}
+                            </span>
                             </div>
                           </div>
                           {/* Content */}
@@ -292,13 +287,6 @@ const Index = () => {
                             <CardDescription className="text-gray-600 text-base leading-relaxed mb-6">
                               {project.description}
                             </CardDescription>
-                            <Button
-                              variant="outline"
-                              className="w-fit border-[#8B0000] text-[#8B0000] hover:bg-[#8B0000] hover:text-white"
-                            >
-                              Ver projeto
-                              <ArrowRight className="w-4 h-4 ml-2" />
-                            </Button>
                           </CardContent>
                         </div>
                       </Card>
@@ -310,13 +298,13 @@ const Index = () => {
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors"
+                className="carousel-nav-btn prev"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors"
+                className="carousel-nav-btn next"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700" />
               </button>
@@ -324,13 +312,13 @@ const Index = () => {
               {/* Dots Indicator */}
               <div className="flex justify-center mt-8 space-x-2">
                 {featuredProjects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? "bg-[#8B0000]" : "bg-gray-300"
-                    }`}
-                  />
+                                  <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`carousel-dot ${
+                    index === currentSlide ? "active" : ""
+                  }`}
+                />
                 ))}
               </div>
             </div>
@@ -344,7 +332,7 @@ const Index = () => {
               <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
                 O que dizem nossos clientes
               </h2>
-              <div className="w-20 h-1 bg-[#8B0000] mx-auto"></div>
+              <div className="section-divider"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -369,7 +357,7 @@ const Index = () => {
                 },
               ].map((testimonial, index) => (
                 <Card key={index} className="bg-white shadow-lg p-6">
-                  <Quote className="w-8 h-8 text-[#8B0000] mb-4" />
+                  <Quote className="w-8 h-8 text-primary-red mb-4" />
                   <CardContent className="p-0">
                     <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                       {testimonial.quote}
@@ -399,7 +387,7 @@ const Index = () => {
               Entre em contato conosco para uma consulta gratuita e descubra como
               a RMG Construtora pode ajudar no seu próximo projeto.
             </p>
-            <Button className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+            <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
               Fale Conosco
             </Button>
           </div>
@@ -413,7 +401,7 @@ const Index = () => {
               <div>
                 <div className="flex items-center space-x-1 mb-4">
                   <span className="text-white text-lg font-bold">RMG</span>
-                  <span className="text-[#8B0000] text-lg font-bold">
+                  <span className="text-primary-red text-lg font-bold">
                     CONSTRUTORA
                   </span>
                 </div>
@@ -422,9 +410,9 @@ const Index = () => {
                   residenciais, além de serviços de terceirização.
                 </p>
                 <div className="flex space-x-4">
-                  <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-                  <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-                  <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                  <Facebook className="w-5 h-5 social-icon" />
+                  <Instagram className="w-5 h-5 social-icon" />
+                  <Linkedin className="w-5 h-5 social-icon" />
                 </div>
               </div>
 
@@ -435,7 +423,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Home
                     </a>
@@ -443,7 +431,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/obra-empresarial"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Obra Empresarial
                     </a>
@@ -451,7 +439,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/obra-corporativa"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Obra Corporativa
                     </a>
@@ -459,7 +447,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/obra-residencial"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Obra Residencial
                     </a>
@@ -467,7 +455,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/facilities"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Facilities
                     </a>
@@ -475,7 +463,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/sobre-nos"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Sobre Nós
                     </a>
@@ -483,7 +471,7 @@ const Index = () => {
                   <li>
                     <a
                       href="/fale-conosco"
-                      className="text-gray-300 text-sm hover:text-white transition-colors"
+                      className="footer-link"
                     >
                       Fale Conosco
                     </a>
@@ -496,17 +484,17 @@ const Index = () => {
                 <h3 className="text-white font-semibold mb-4">Contato</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-[#8B0000]" />
+                    <MapPin className="w-5 h-5 text-primary-red" />
                     <span className="text-gray-300 text-sm">
                       Av. Paulista, 1000, São Paulo - SP
                     </span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-[#8B0000]" />
+                    <Phone className="w-5 h-5 text-primary-red" />
                     <span className="text-gray-300 text-sm">(11) 5555-5555</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-[#8B0000]" />
+                    <Mail className="w-5 h-5 text-primary-red" />
                     <span className="text-gray-300 text-sm">
                       contato@rmgconstrutora.com.br
                     </span>

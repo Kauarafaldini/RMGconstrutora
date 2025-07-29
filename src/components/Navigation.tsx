@@ -39,7 +39,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-1">
             <span className="text-white text-xl font-bold">RMG</span>
-            <span className="text-[#8B0000] text-xl font-bold">
+            <span className="text-primary-red text-xl font-bold">
               CONSTRUTORA
             </span>
           </Link>
@@ -52,26 +52,26 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                 onClick={() => toggleDropdown("home")}
                 className={`${
                   isActive("/")
-                    ? "text-[#8B0000]"
-                    : "text-gray-300 hover:text-white"
-                } text-sm font-medium transition-colors flex items-center gap-1`}
+                    ? "nav-link active"
+                    : "nav-link"
+                } flex items-center gap-1`}
               >
                 Home
                 <ChevronDown className="w-3 h-3" />
               </button>
               {dropdowns.home && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                <div className="dropdown-menu">
                   <Link
                     to="/"
                     onClick={closeDropdowns}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="dropdown-item"
                   >
                     Home
                   </Link>
                   <Link
                     to="/sobre-nos"
                     onClick={closeDropdowns}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="dropdown-item"
                   >
                     Sobre Nós
                   </Link>
@@ -87,33 +87,33 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                   isActive("/obra-empresarial") ||
                   isActive("/obra-corporativa") ||
                   isActive("/obra-residencial")
-                    ? "text-[#8B0000]"
-                    : "text-gray-300 hover:text-white"
-                } text-sm font-medium transition-colors flex items-center gap-1`}
+                    ? "nav-link active"
+                    : "nav-link"
+                } flex items-center gap-1`}
               >
                 Obras
                 <ChevronDown className="w-3 h-3" />
               </button>
               {dropdowns.obras && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                <div className="dropdown-menu">
                   <Link
                     to="/obra-empresarial"
                     onClick={closeDropdowns}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="dropdown-item"
                   >
                     Obra Empresarial
                   </Link>
                   <Link
                     to="/obra-corporativa"
                     onClick={closeDropdowns}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="dropdown-item"
                   >
                     Obra Corporativa
                   </Link>
                   <Link
                     to="/obra-residencial"
                     onClick={closeDropdowns}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="dropdown-item"
                   >
                     Obra Residencial
                   </Link>
@@ -126,9 +126,9 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               to="/facilities"
               className={`${
                 isActive("/facilities")
-                  ? "text-[#8B0000]"
-                  : "text-gray-300 hover:text-white"
-              } text-sm font-medium transition-colors`}
+                  ? "nav-link active"
+                  : "nav-link"
+              }`}
             >
               Facilities
             </Link>
@@ -138,9 +138,9 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               to="/fale-conosco"
               className={`${
                 isActive("/fale-conosco")
-                  ? "text-[#8B0000]"
-                  : "text-gray-300 hover:text-white"
-              } text-sm font-medium transition-colors`}
+                  ? "nav-link active"
+                  : "nav-link"
+              }`}
             >
               Fale Conosco
             </Link>

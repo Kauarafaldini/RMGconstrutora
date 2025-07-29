@@ -13,6 +13,7 @@ import SobreNos from "./pages/SobreNos";
 import FaleConosco from "./pages/FaleConosco";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import "./styles/components.css";
 
 const queryClient = new QueryClient();
 

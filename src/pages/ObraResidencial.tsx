@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { Home, Heart, Shield, Palette, ChevronRight } from "lucide-react";
+import { Home, Heart, Shield, Palette, ChevronRight, Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const ResidentialProjects = () => {
         <div className="container mx-auto px-8 relative">
           <div className="max-w-4xl">
             <h1 className="text-5xl font-bold mb-6">Obras Residenciais</h1>
-            <div className="w-20 h-1 bg-primary mb-6"></div>
+            <div className="section-divider mb-6"></div>
             <p className="text-gray-300 text-lg leading-7 max-w-2xl">
               Transformamos sonhos em lares, com projetos residenciais
               personalizados que combinam estética, conforto e funcionalidade.
@@ -39,7 +39,7 @@ const ResidentialProjects = () => {
                   <br />
                   estilo de vida e necessidades de cada cliente.
                 </p>
-                <div className="w-20 h-1 bg-primary"></div>
+                <div className="section-divider"></div>
               </div>
 
               <p className="text-gray-600 text-sm leading-6 mb-6">
@@ -60,32 +60,32 @@ const ResidentialProjects = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
                   <span className="text-gray-700 text-sm">
                     Casas de alto padrão
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
                   <span className="text-gray-700 text-sm">
                     Condomínios residenciais
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
                   <span className="text-gray-700 text-sm">
                     Reformas completas
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
                   <span className="text-gray-700 text-sm">
                     Projetos personalizados
                   </span>
                 </div>
               </div>
 
-              <Button onClick={() => navigate("/fale-conosco")} className="bg-primary hover:bg-primary/90 text-white">
+              <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
                 Agende uma consulta
               </Button>
             </div>
@@ -94,10 +94,10 @@ const ResidentialProjects = () => {
             <div className="flex-1 relative">
               {/* Indicadores */}
               <div className="absolute -top-8 left-0 flex gap-4 z-10">
-                <div className="bg-primary text-white rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
+                <div className="bg-primary-red text-white rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
                   <span>10 anos de experiência</span>
                 </div>
-                <div className="bg-primary text-white border border-primary rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
+                <div className="bg-primary-red text-white border border-primary-red rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
                   <span>+50 contratos</span>
                 </div>
               </div>
@@ -138,14 +138,14 @@ const ResidentialProjects = () => {
             <p className="text-gray-600 text-sm">
               Como trabalhamos para criar o lar dos seus sonhos
             </p>
-            <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            <div className="section-divider mx-auto mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Personalization */}
             <Card className="p-8 text-center shadow-md">
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Home className="w-8 h-8 text-primary" />
+              <div className="icon-container mx-auto mb-6">
+                <Home className="w-8 h-8 text-primary-red" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">
                 Personalização
@@ -162,8 +162,8 @@ const ResidentialProjects = () => {
 
             {/* Comfort */}
             <Card className="p-8 text-center shadow-md">
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-primary" />
+              <div className="icon-container mx-auto mb-6">
+                <Heart className="w-8 h-8 text-primary-red" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">Conforto</h3>
               <p className="text-gray-600 text-sm text-center leading-6">
@@ -177,8 +177,8 @@ const ResidentialProjects = () => {
 
             {/* Durability */}
             <Card className="p-8 text-center shadow-md">
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-primary" />
+              <div className="icon-container mx-auto mb-6">
+                <Shield className="w-8 h-8 text-primary-red" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">
                 Durabilidade
@@ -195,8 +195,8 @@ const ResidentialProjects = () => {
 
             {/* Aesthetics */}
             <Card className="p-8 text-center shadow-md">
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
-                <Palette className="w-8 h-8 text-primary" />
+              <div className="icon-container mx-auto mb-6">
+                <Palette className="w-8 h-8 text-primary-red" />
               </div>
               <h3 className="text-lg font-bold text-black mb-4">Estética</h3>
               <p className="text-gray-600 text-sm text-center leading-6">
@@ -222,7 +222,7 @@ const ResidentialProjects = () => {
             <p className="text-gray-600 mb-6">
               Processo completo do terreno à casa dos seus sonhos
             </p>
-            <div className="w-20 h-1 bg-primary"></div>
+            <div className="section-divider"></div>
           </div>
 
           {/* Flowchart Container */}
@@ -242,7 +242,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         1
                       </div>
                     </div>
@@ -257,7 +257,7 @@ const ResidentialProjects = () => {
 
                 {/* Arrow 1 to 2 */}
                 <div className="flex items-center px-4">
-                  <ChevronRight className="w-6 h-6 text-primary" />
+                  <ChevronRight className="w-6 h-6 text-primary-red" />
                 </div>
 
                 {/* Step 2 */}
@@ -271,7 +271,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         2
                       </div>
                     </div>
@@ -286,7 +286,7 @@ const ResidentialProjects = () => {
 
                 {/* Arrow 2 to 3 */}
                 <div className="flex items-center px-4">
-                  <ChevronRight className="w-6 h-6 text-primary" />
+                  <ChevronRight className="w-6 h-6 text-primary-red" />
                 </div>
 
                 {/* Step 3 */}
@@ -300,7 +300,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         3
                       </div>
                     </div>
@@ -315,7 +315,7 @@ const ResidentialProjects = () => {
 
                 {/* Arrow 3 to 4 */}
                 <div className="flex items-center px-4">
-                  <ChevronRight className="w-6 h-6 text-primary" />
+                  <ChevronRight className="w-6 h-6 text-primary-red" />
                 </div>
 
                 {/* Step 4 */}
@@ -329,7 +329,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         4
                       </div>
                     </div>
@@ -346,8 +346,8 @@ const ResidentialProjects = () => {
               {/* Vertical Arrow Down */}
               <div className="flex justify-center mb-8">
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-8 bg-primary"></div>
-                  <div className="w-3 h-3 bg-primary transform rotate-45 border-r border-b border-primary"></div>
+                  <div className="w-0.5 h-8 bg-primary-red"></div>
+                  <div className="w-3 h-3 bg-primary-red transform rotate-45 border-r border-b border-primary-red"></div>
                 </div>
               </div>
 
@@ -364,7 +364,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         5
                       </div>
                     </div>
@@ -379,7 +379,7 @@ const ResidentialProjects = () => {
 
                 {/* Arrow 5 to 6 */}
                 <div className="flex items-center">
-                  <ChevronRight className="w-6 h-6 text-primary" />
+                  <ChevronRight className="w-6 h-6 text-primary-red" />
                 </div>
 
                 {/* Step 6 */}
@@ -393,7 +393,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         6
                       </div>
                     </div>
@@ -408,12 +408,12 @@ const ResidentialProjects = () => {
 
                 {/* Arrow 6 to 7 */}
                 <div className="flex items-center">
-                  <ChevronRight className="w-6 h-6 text-primary" />
+                  <ChevronRight className="w-6 h-6 text-primary-red" />
                 </div>
 
                 {/* Step 7 */}
                 <div className="flex-1 max-w-xs">
-                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 border-2 border-primary">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 border-2 border-primary-red">
                     <div className="relative mb-3">
                       <div className="aspect-video rounded-lg overflow-hidden">
                         <img
@@ -422,7 +422,7 @@ const ResidentialProjects = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute top-2 left-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                      <div className="absolute top-2 left-2 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                         7
                       </div>
                     </div>
@@ -486,7 +486,7 @@ const ResidentialProjects = () => {
                 <div key={step.num} className="relative">
                   <div
                     className={`bg-white rounded-lg shadow-sm p-4 ${
-                      step.num === 7 ? "border-2 border-primary" : ""
+                      step.num === 7 ? "border-2 border-primary-red" : ""
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -496,7 +496,7 @@ const ResidentialProjects = () => {
                           alt={step.title}
                           className="w-full h-full object-cover rounded"
                         />
-                        <div className="absolute -top-1 -left-1 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+                        <div className="absolute -top-1 -left-1 bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
                           {step.num}
                         </div>
                       </div>
@@ -510,7 +510,7 @@ const ResidentialProjects = () => {
                   </div>
                   {index < 6 && (
                     <div className="flex justify-center my-3">
-                      <div className="w-0.5 h-6 bg-primary"></div>
+                      <div className="w-0.5 h-6 bg-primary-red"></div>
                     </div>
                   )}
                 </div>
@@ -530,7 +530,7 @@ const ResidentialProjects = () => {
             <p className="text-gray-600 text-sm">
               Como trabalhamos para transformar seu sonho em realidade
             </p>
-            <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
+            <div className="section-divider mx-auto mt-6"></div>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -551,7 +551,7 @@ const ResidentialProjects = () => {
                       orçamento para alinhar expectativas.
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 rounded-full bg-primary-red border-4 border-white shadow-lg z-10"></div>
                   <div className="flex-1 pl-8"></div>
                 </div>
 
@@ -623,23 +623,120 @@ const ResidentialProjects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-20 bg-[#1A365D] text-white">
         <div className="container mx-auto px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Pronto para construir ou reformar sua casa?
           </h2>
           <p className="text-gray-300 text-lg leading-7 max-w-4xl mx-auto mb-8">
             Entre em contato conosco para uma consulta gratuita e descubra como
-            podemos <br />
-            transformar sua visão em realidade.
+            podemos transformar sua visão em realidade.
           </p>
-          <Button onClick={() => navigate("/fale-conosco")} className="bg-primary hover:bg-primary/90 text-white">
+          <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
             Agende uma visita
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {/* Company Info */}
+            <div>
+              <div className="flex items-center space-x-1 mb-4">
+                <span className="text-white text-lg font-bold">RMG</span>
+                <span className="text-primary-red text-lg font-bold">
+                  CONSTRUTORA
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm mb-6">
+                Especializada em obras empresariais, corporativas e
+                residenciais, além de serviços de terceirização.
+              </p>
+              <div className="flex space-x-4">
+                <Facebook className="w-5 h-5 social-icon" />
+                <Instagram className="w-5 h-5 social-icon" />
+                <Linkedin className="w-5 h-5 social-icon" />
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Navegação</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/" className="footer-link">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/obra-empresarial" className="footer-link">
+                    Obra Empresarial
+                  </a>
+                </li>
+                <li>
+                  <a href="/obra-corporativa" className="footer-link">
+                    Obra Corporativa
+                  </a>
+                </li>
+                <li>
+                  <a href="/obra-residencial" className="footer-link">
+                    Obra Residencial
+                  </a>
+                </li>
+                <li>
+                  <a href="/facilities" className="footer-link">
+                    Facilities
+                  </a>
+                </li>
+                <li>
+                  <a href="/sobre-nos" className="footer-link">
+                    Sobre Nós
+                  </a>
+                </li>
+                <li>
+                  <a href="/fale-conosco" className="footer-link">
+                    Fale Conosco
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Contato</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-primary-red" />
+                  <span className="text-gray-300 text-sm">
+                    Av. Paulista, 1000, São Paulo - SP
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary-red" />
+                  <span className="text-gray-300 text-sm">(11) 5555-5555</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-primary-red" />
+                  <span className="text-gray-300 text-sm">
+                    contato@rmgconstrutora.com.br
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-gray-800 pt-6 text-center">
+            <p className="text-gray-400 text-xs">
+              2025 RMG Construtora. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
-    </div>
+  </div>
   );
 };
 
