@@ -27,16 +27,10 @@ const services = [
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Gestão de Utilidades",
-    description: "Administração eficiente de água, energia elétrica, gás e outros recursos, visando economia e sustentabilidade.",
+    name: "Solda",
+    description: "União precisa de metais com resistência e qualidade para aplicações industriais.",
     image:
       "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Serviços de Recepção",
-    description: "Equipes qualificadas para recepção, portaria e controle de acesso em ambientes corporativos.",
-    image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ];
 

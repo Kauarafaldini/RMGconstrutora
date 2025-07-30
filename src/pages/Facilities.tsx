@@ -89,7 +89,7 @@ const Facilities = () => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-red-900 rounded-full mr-3"></div>
                   <span className="text-gray-700 text-sm">
-                    Gestão de utilidades
+                    Solda
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -204,30 +204,15 @@ const Facilities = () => {
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                   <Settings className="w-6 h-6 text-red-900" />
                 </div>
-                <CardTitle className="text-lg">Gestão de Utilidades</CardTitle>
+                <CardTitle className="text-lg">Solda</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Administração eficiente de água, energia elétrica, gás e
-                  outros recursos, visando economia e sustentabilidade.
+                  Aplicação de técnicas e processos de união de materiais metálicos por meio do calor, garantindo estruturas resistentes, seguras e de alta qualidade, com foco na produtividade e na precisão industrial.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="border-t-4 border-t-red-900">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-red-900" />
-                </div>
-                <CardTitle className="text-lg">Serviços de Recepção</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
-                  Equipes qualificadas para recepção, portaria e controle de
-                  acesso em ambientes corporativos.
-                </CardDescription>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

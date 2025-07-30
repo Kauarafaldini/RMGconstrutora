@@ -89,19 +89,7 @@ const SobreNos = () => {
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-red-900 mr-3" />
                   <span className="text-gray-700 text-sm">
-                    +500 projetos concluídos
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-red-900 mr-3" />
-                  <span className="text-gray-700 text-sm">
-                    +300 colaboradores
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-red-900 mr-3" />
-                  <span className="text-gray-700 text-sm">
-                    Presente em 5 estados
+                    +50 projetos concluídos
                   </span>
                 </div>
               </div>
