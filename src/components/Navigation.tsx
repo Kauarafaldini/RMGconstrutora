@@ -38,10 +38,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-1">
-            <span className="text-white text-xl font-bold">RMG</span>
-            <span className="text-primary-red text-xl font-bold">
-              CONSTRUTORA
-            </span>
+            <img src="/src/imagens/RMG_logo.png" alt="RMG logo" className="h-20" />
           </Link>
 
           {/* Navigation - Desktop */}

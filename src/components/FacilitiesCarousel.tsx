@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
   {
-    name: "Manutenção Predial",
+    name: "Manutenção Industrial",
     description: "Serviços preventivos e corretivos para sistemas elétricos, hidráulicos, ar condicionado e estrutura predial.",
     image:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",

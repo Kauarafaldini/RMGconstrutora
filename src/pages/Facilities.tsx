@@ -83,7 +83,7 @@ const Facilities = () => {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-red-900 rounded-full mr-3"></div>
                   <span className="text-gray-700 text-sm">
-                    Manutenção predial
+                    Manutenção Industrial
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -145,7 +145,7 @@ const Facilities = () => {
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                   <Wrench className="w-6 h-6 text-red-900" />
                 </div>
-                <CardTitle className="text-lg">Manutenção Predial</CardTitle>
+                <CardTitle className="text-lg">Manutenção Industrial</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">

@@ -25,28 +25,28 @@
 
 /* Custom Colors */
 .text-primary-red {
-  color: #8B0000;
+  color: #7f112a;
 }
 
 .bg-primary-red {
-  background-color: #8B0000;
+  background-color: #7f112a;
 }
 
 .border-primary-red {
-  border-color: #8B0000;
+  border-color: #7f112a;
 }
 
 .hover\:bg-primary-red:hover {
-  background-color: #8B0000;
+  background-color: #7f112a;
 }
 
 .hover\:text-primary-red:hover {
-  color: #8B0000;
+  color: #7f112a;
 }
 
 /* Button Styles */
 .btn-primary {
-  background-color: #8B0000;
+  background-color: #7f112a;
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
@@ -60,8 +60,8 @@
 }
 
 .btn-outline-primary {
-  border: 1px solid #8B0000;
-  color: #8B0000;
+  border: 1px solid #7f112a;
+  color: #7f112a;
   padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -70,7 +70,7 @@
 }
 
 .btn-outline-primary:hover {
-  background-color: #8B0000;
+  background-color: #7f112a;
   color: white;
 }
 
@@ -78,14 +78,14 @@
 .section-divider {
   width: 5rem;
   height: 0.25rem;
-  background-color: #8B0000;
+  background-color: #7f112a;
   margin: 0 auto;
 }
 
 /* Card Styles */
 .card-service {
   background-color: white;
-  border-top: 4px solid #8B0000;
+  border-top: 4px solid #7f112a;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -130,7 +130,7 @@
 }
 
 .nav-link.active {
-  color: #8B0000;
+  color: #7f112a;
 }
 
 .nav-link:not(.active) {
@@ -155,7 +155,7 @@
   display: block;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  color: #374151;
+  color: #0b75ba;
   transition: background-color 0.2s;
 }
 
@@ -198,7 +198,7 @@
 }
 
 .carousel-dot.active {
-  background-color: #8B0000;
+  background-color: #7f112a;
 }
 
 .carousel-dot:not(.active) {
