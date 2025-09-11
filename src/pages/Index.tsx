@@ -387,7 +387,7 @@ const Index = () => {
               Entre em contato conosco para uma consulta gratuita e descubra como
               a RMG Construtora pode ajudar no seu próximo projeto.
             </p>
-            <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
+            <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 btn-primary">
               Fale Conosco
             </Button>
           </div>
@@ -496,7 +496,7 @@ const Index = () => {
                   <li className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-primary-red" />
                     <span className="text-gray-300 text-sm">
-                      contato@rmgconstrutora.com.br
+                      comercial@rmgconstrutora.com.br
                     </span>
                   </li>
                 </ul>

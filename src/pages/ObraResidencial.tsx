@@ -43,19 +43,19 @@ const ResidentialProjects = () => {
               </div>
 
               <p className="text-gray-600 text-sm leading-6 mb-6">
-                Na RGM Construtora, entendemos que uma casa é muito mais <br />
+                Entendemos que uma casa é muito mais <br />
                 que uma estrutura física. É o espaço onde memórias são <br />
-                criadas, onde o conforto se encontra com a funcionalidade, e{" "}
+                criadas, onde conforto e funcionalidade se encontram, trazendo{" "}
                 <br />
-                onde sua personalidade se expressa em cada detalhe.
+                personalidade em cada detalhe.
               </p>
 
               <p className="text-gray-600 text-sm leading-6 mb-8">
-                Nossa abordagem para projetos residenciais combina design <br />
-                contemporâneo, materiais de qualidade e técnicas construtivas{" "}
+                Abordamos nossos projetos sempre pensando em nossos clientes,  <br />
+                transformando seus sonhos e necessidades em seu lar,{" "}
                 <br />
-                avançadas para criar ambientes que superam expectativas e <br />
-                resistem ao teste do tempo.
+                criando assim ambientes que superam expectativas e <br />
+                resistem ao tempo.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -85,7 +85,7 @@ const ResidentialProjects = () => {
                 </div>
               </div>
 
-              <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
+              <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 btn-primary">
                 Agende uma consulta
               </Button>
             </div>
@@ -96,9 +96,6 @@ const ResidentialProjects = () => {
               <div className="absolute -top-8 left-0 flex gap-4 z-10">
                 <div className="bg-primary-red text-white rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
                   <span>10 anos de experiência</span>
-                </div>
-                <div className="bg-primary-red text-white border border-primary-red rounded-full px-4 py-2 shadow-lg text-sm font-semibold flex items-center">
-                  <span>+50 contratos</span>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -217,10 +214,10 @@ const ResidentialProjects = () => {
         <div className="max-w-[1020px] mx-auto px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-black mb-4">
-              Terrenos e Construções
+              Terreno e Construção
             </h2>
             <p className="text-gray-600 mb-6">
-              Processo completo do terreno à casa dos seus sonhos
+              Processo completo desde o financiamento até a entrega das chaves de seu novo lar!!!
             </p>
             <div className="section-divider"></div>
           </div>
@@ -520,108 +517,6 @@ const ResidentialProjects = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-black mb-4">
-              Nosso Processo
-            </h2>
-            <p className="text-gray-600 text-sm">
-              Como trabalhamos para transformar seu sonho em realidade
-            </p>
-            <div className="section-divider mx-auto mt-6"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200"></div>
-
-              {/* Timeline items */}
-              <div className="space-y-12">
-                {/* Step 1 */}
-                <div className="flex items-center">
-                  <div className="flex-1 text-right pr-8">
-                    <h3 className="text-lg font-bold text-black mb-2">
-                      Consulta Inicial
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-6">
-                      Entendemos suas necessidades, preferências e <br />
-                      orçamento para alinhar expectativas.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 rounded-full bg-primary-red border-4 border-white shadow-lg z-10"></div>
-                  <div className="flex-1 pl-8"></div>
-                </div>
-
-                {/* Step 2 */}
-                <div className="flex items-center">
-                  <div className="flex-1 pr-8"></div>
-                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
-                  <div className="flex-1 pl-8">
-                    <h3 className="text-lg font-bold text-black mb-2">
-                      Projeto Conceitual
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-6">
-                      Desenvolvimento do conceito inicial e estudo preliminar{" "}
-                      <br />
-                      do projeto.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 3 */}
-                <div className="flex items-center">
-                  <div className="flex-1 text-right pr-8">
-                    <h3 className="text-lg font-bold text-black mb-2">
-                      Projeto Detalhado
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-6">
-                      Elaboração dos projetos executivos com todas as <br />
-                      especificações técnicas.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
-                  <div className="flex-1 pl-8"></div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="flex items-center">
-                  <div className="flex-1 pr-8"></div>
-                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
-                  <div className="flex-1 pl-8">
-                    <h3 className="text-lg font-bold text-black mb-2">
-                      Construção
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-6">
-                      Execução da obra com acompanhamento rigoroso de <br />
-                      cada etapa.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 5 */}
-                <div className="flex items-center">
-                  <div className="flex-1 text-right pr-8">
-                    <h3 className="text-lg font-bold text-black mb-2">
-                      Entrega
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-6">
-                      Finalização dos detalhes e entrega do projeto pronto{" "}
-                      <br />
-                      para ser habitado.
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 rounded-full bg-primary border-4 border-white shadow-lg z-10"></div>
-                  <div className="flex-1 pl-8"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-[#1A365D] text-white">
         <div className="container mx-auto px-8 text-center">
@@ -632,7 +527,7 @@ const ResidentialProjects = () => {
             Entre em contato conosco para uma consulta gratuita e descubra como
             podemos transformar sua visão em realidade.
           </p>
-          <Button onClick={() => navigate("/fale-conosco")} className="btn-primary">
+          <Button onClick={() => navigate("/fale-conosco")} className="bg-red-900 btn-primary">
             Agende uma visita
           </Button>
         </div>
@@ -720,7 +615,7 @@ const ResidentialProjects = () => {
                 <li className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary-red" />
                   <span className="text-gray-300 text-sm">
-                    contato@rmgconstrutora.com.br
+                    comercial@rmgconstrutora.com.br
                   </span>
                 </li>
               </ul>

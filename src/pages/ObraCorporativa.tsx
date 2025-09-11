@@ -474,7 +474,7 @@ export default function ObraCorporativa() {
                     />
                   </svg>
                   <span className="text-gray-300 text-sm">
-                    contato@rmgconstrutora.com.br
+                    comercial@rmgconstrutora.com.br
                   </span>
                 </div>
               </div>

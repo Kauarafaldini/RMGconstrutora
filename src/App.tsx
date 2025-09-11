@@ -14,6 +14,7 @@ import FaleConosco from "./pages/FaleConosco";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./styles/components.css";
+import ScrollToTop from "./components/ui/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => {
           <div className="min-h-screen bg-white">
             <Navigation />
             <main>
+                <ScrollToTop />
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/obra-empresarial" element={<ObraEmpresarial />} />

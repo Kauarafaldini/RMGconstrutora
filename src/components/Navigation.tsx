@@ -33,7 +33,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`bg-black shadow-lg sticky top-0 z-50 ${className}`}>
+    <header className={`bg-[#ced4da] shadow-lg sticky top-0 z-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

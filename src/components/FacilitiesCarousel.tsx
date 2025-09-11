@@ -6,7 +6,7 @@ const services = [
     name: "Manutenção Industrial",
     description: "Serviços preventivos e corretivos para sistemas elétricos, hidráulicos, ar condicionado e estrutura predial.",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "./src/imagens/manutencao_9.jpeg",
   },
   {
     name: "Gestão de Facilities",
@@ -18,19 +18,19 @@ const services = [
     name: "Limpeza e Conservação",
     description: "Serviços especializados de limpeza para ambientes corporativos, industriais e comerciais.",
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "./src/imagens/Jardinagem_4.jpeg",
   },
   {
     name: "Jardinagem",
     description: "Manutenção e cuidado de áreas verdes, jardins e paisagismo corporativo.",
     image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "./src/imagens/Jardinagem_1.jpg",
   },
   {
     name: "Solda",
     description: "União precisa de metais com resistência e qualidade para aplicações industriais.",
     image:
-      "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "./src/imagens/manutencao_16.jpeg",
   },
 ];
 

@@ -134,7 +134,7 @@
 }
 
 .nav-link:not(.active) {
-  color: #d1d5db;
+  color: #000;
 }
 
 /* Dropdown Styles */

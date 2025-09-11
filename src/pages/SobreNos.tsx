@@ -199,12 +199,12 @@ const SobreNos = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+      <section className="py-20 bg-[#1A365D] text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Faça parte da nossa história
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
+          <p className="text-3xl text-lg max-w-3xl mx-auto mb-8">
             Conheça mais sobre a RMG Construtora e descubra como podemos ajudar
             a transformar seu projeto em realidade.
           </p>
@@ -319,7 +319,7 @@ const SobreNos = () => {
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-red-900 mr-3" />
                   <span className="text-gray-400 text-sm">
-                    contato@rmgconstrutora.com.br
+                    comercial@rmgconstrutora.com.br
                   </span>
                 </div>
               </div>
