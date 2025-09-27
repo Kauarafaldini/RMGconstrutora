@@ -31,7 +31,7 @@ export default function ObraCorporativa() {
             <div className="flex-1 relative">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/api/placeholder/300/200"
+                  src="https://images.unsplash.com/photo-1710936101130-8b66df29aa62?ixlib=rb-4.0.3&q=80&w=1080&fit=max"
                   alt="Projeto corporativo"
                   className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />

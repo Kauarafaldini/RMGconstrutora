@@ -5,34 +5,30 @@ const services = [
   {
     name: "Manutenção Industrial",
     description: "Serviços preventivos e corretivos para sistemas elétricos, hidráulicos, ar condicionado e estrutura predial.",
-    image:
-      "./src/imagens/manutencao_9.jpeg",
+    image: "/imagens/manutencao_9.jpeg",
   },
   {
     name: "Gestão de Facilities",
     description: "Planejamento, coordenação e supervisão de todos os serviços relacionados à infraestrutura e operações.",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Limpeza e Conservação",
     description: "Serviços especializados de limpeza para ambientes corporativos, industriais e comerciais.",
-    image:
-      "./src/imagens/Jardinagem_4.jpeg",
+    image: "/imagens/Jardinagem_4.jpeg",
   },
   {
     name: "Jardinagem",
     description: "Manutenção e cuidado de áreas verdes, jardins e paisagismo corporativo.",
-    image:
-      "./src/imagens/Jardinagem_1.jpg",
+    image: "/imagens/Jardinagem_1.jpg",
   },
   {
     name: "Solda",
     description: "União precisa de metais com resistência e qualidade para aplicações industriais.",
-    image:
-      "./src/imagens/manutencao_16.jpeg",
+    image: "/imagens/manutencao_16.jpeg",
   },
 ];
+
 
 const FacilitiesCarousel: React.FC = () => {
   const [current, setCurrent] = useState(0);

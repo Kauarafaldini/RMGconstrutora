@@ -11,11 +11,13 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
     home: false,
     obras: false,
   });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   // Fechar dropdowns quando a rota mudar
   useEffect(() => {
     setDropdowns({ home: false, obras: false });
+    setMobileMenuOpen(false);
   }, [location.pathname]);
 
   const toggleDropdown = (dropdown: keyof typeof dropdowns) => {
@@ -28,6 +30,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
 
   const closeDropdowns = () => {
     setDropdowns({ home: false, obras: false });
+    setMobileMenuOpen(false);
   };
 
   const isActive = (path: string) => location.pathname === path;
@@ -38,7 +41,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-1">
-            <img src="/src/imagens/RMG_logo.png" alt="RMG logo" className="h-20" />
+            <img src="/imagens/RMG_logo.png" alt="RMG logo" className="h-20" />
           </Link>
 
           {/* Navigation - Desktop */}
@@ -144,7 +147,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           </nav>
 
           {/* Mobile menu button */}
-          <button className="lg:hidden text-white">
+          <button className="lg:hidden text-black" onClick={() => setMobileMenuOpen((open) => !open)}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -162,8 +165,28 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
         </div>
       </div>
 
-      {/* Click outside to close dropdowns */}
-      {(dropdowns.home || dropdowns.obras) && (
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-40" onClick={closeDropdowns} />
+      )}
+      {mobileMenuOpen && (
+        <nav className="fixed top-0 right-0 w-64 h-full bg-white z-50 shadow-lg flex flex-col p-6 gap-4 animate-slide-in">
+          <button className="self-end mb-4" onClick={closeDropdowns} aria-label="Fechar menu">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <Link to="/" className="nav-link" onClick={closeDropdowns}>Home</Link>
+          <Link to="/sobre-nos" className="nav-link" onClick={closeDropdowns}>Sobre Nós</Link>
+          <Link to="/obra-empresarial" className="nav-link" onClick={closeDropdowns}>Obra Empresarial</Link>
+          <Link to="/obra-corporativa" className="nav-link" onClick={closeDropdowns}>Obra Corporativa</Link>
+          <Link to="/obra-residencial" className="nav-link" onClick={closeDropdowns}>Obra Residencial</Link>
+          <Link to="/facilities" className="nav-link" onClick={closeDropdowns}>Facilities</Link>
+          <Link to="/fale-conosco" className="nav-link" onClick={closeDropdowns}>Fale Conosco</Link>
+        </nav>
+      )}
+      {/* Click outside to close dropdowns (desktop) */}
+      {(dropdowns.home || dropdowns.obras) && !mobileMenuOpen && (
         <div className="fixed inset-0 z-40" onClick={closeDropdowns}></div>
       )}
     </header>
