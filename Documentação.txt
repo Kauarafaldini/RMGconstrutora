@@ -1,0 +1,105 @@
+Refatoração de CSS – Separação de Estilos Inline
+Visão Geral
+
+Esta refatoração teve como objetivo melhorar a organização do código, removendo estilos inline e centralizando todo o CSS em um arquivo externo. Com isso, o projeto ficou mais limpo, fácil de manter e preparado para crescer de forma mais estruturada.
+
+O que foi feito
+Novo arquivo criado
+
+src/styles/components.css
+Arquivo responsável por concentrar todos os estilos que antes estavam espalhados pelo código.
+
+Arquivos atualizados
+
+src/App.tsx
+Inclusão da importação do CSS de componentes.
+src/pages/Index.tsx
+Substituição de estilos inline por classes CSS.
+src/components/Navigation.tsx
+Ajustes nos estilos da navegação.
+src/components/ui/WhatsAppButton.tsx
+Simplificação do componente usando classes CSS reutilizáveis.
+
+Principais melhorias
+
+Organização do CSS
+
+Antes: Estilos aplicados diretamente nos componentes, misturando style, Tailwind e classes customizadas.
+Depois: Estilos bem definidos em classes CSS semânticas dentro do components.css.
+
+Reutilização de estilos
+
+Antes: Mesmas cores e padrões repetidos em vários lugares.
+Depois: Criação de classes reutilizáveis, como .text-primary-red e .btn-primary, evitando duplicação.
+
+Facilidade de manutenção
+
+Antes: Alterar um detalhe visual exigia mudanças em vários arquivos.
+Depois: Ajustes centralizados em um único arquivo CSS.
+
+Classes CSS criadas
+Cores e tema
+
+.text-primary-red – Vermelho principal (#8B0000)
+.bg-primary-red – Fundo vermelho principal
+.border-primary-red – Borda vermelha principal
+  
+Botões
+.btn-primary – Botão principal
+.btn-outline-primary – Botão com estilo outline
+  
+Layout e seções
+.hero-background – Background da seção hero
+.hero-gradient – Gradiente do hero
+.section-divider – Divisores de seção
+.project-image-gradient – Gradiente das imagens de projetos
+
+Navegação
+.nav-link – Links de navegação
+.nav-link.active – Link ativo
+.dropdown-menu – Menu dropdown
+.dropdown-item – Itens do dropdown
+
+Carousel
+.carousel-slide – Transição de slides
+.carousel-nav-btn – Botões de navegação
+.carousel-dot – Indicadores de posição
+  
+Cards e componentes
+.card-service – Card de serviços
+.card-value – Card de valores
+.icon-container – Container de ícones
+.icon-container-lg – Container de ícones maiores
+
+Footer e redes sociais
+.footer-link – Links do rodapé
+.social-icon – Ícones sociais
+.whatsapp-btn – Botão do WhatsApp
+  
+Animações
+.fade-in – Animação de entrada suave
+.slide-in-left – Entrada pela esquerda
+.slide-in-right – Entrada pela direita
+  
+Benefícios dessa refatoração
+
+Melhor performance: CSS externo pode ser cacheado pelo navegador
+Manutenção simplificada: Alterações visuais em um único lugar
+Reutilização: Menos código repetido
+Organização: Componentes mais limpos e legíveis
+Escalabilidade: Base preparada para crescer com consistência
+
+Como continuar usando
+Adicione novos estilos no arquivo src/styles/components.css
+Utilize as classes diretamente nos componentes React
+Siga o padrão de nomenclatura já estabelecido
+
+// Antes
+<Button className="bg-[#8B0000] hover:bg-red-800 text-white px-6 py-3 text-sm font-medium">
+  Botão
+</Button>
+
+// Depois
+<Button className="btn-primary">
+  Botão
+</Button>
