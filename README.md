@@ -56,4 +56,3 @@ Full Stack Developer
 
 GitHub: https://github.com/Kauarafaldini
 
-LinkedIn: https://linkedin.com/in/seu-perfil
